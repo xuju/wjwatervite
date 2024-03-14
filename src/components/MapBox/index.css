@@ -1,0 +1,12 @@
+.position-wrap {
+  position: fixed;
+  bottom: 8px;
+  right: 150px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #333;
+  padding: 0 10px;
+}
+.position-wrap .esri-ui-bottom-right {
+  bottom: -20px;
+}

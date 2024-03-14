@@ -1,0 +1,415 @@
+.basics-left {
+  position: absolute;
+  height: 100%;
+  z-index: 500;
+  width: 423px;
+  padding: 10px 10px 0 10px;
+  box-sizing: border-box;
+  padding-top: 85px;
+  background-image: linear-gradient(to right, #091c37, rgba(9, 28, 54, 0.7) 50%, rgba(9, 28, 53, 0.35) 90%, rgba(9, 28, 53, 0));
+  left: 0;
+  top: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  .basics-left-wrap {
+    width: 90%;
+    margin: auto;
+  }
+
+  .centers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .top {}
+
+  .basics-desc-wrap {
+    flex: 1;
+
+    .basics-desc-text {
+      width: 346px;
+      height: 230px;
+      background: url(./images/内容框.png) 100% 100% no-repeat;
+      margin-top: 14px;
+      padding: 15px;
+      text-indent: 20px;
+      overflow-y: auto;
+      line-height: 26px;
+    }
+  }
+
+
+  .hd-wrap {
+    flex: 1;
+    .top;
+    .centers;
+
+    .list {
+      .top;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      &>li {
+        display: inline-block;
+        position: relative;
+      }
+
+      &>li:nth-child(2) {
+        margin: 0 7px;
+
+        .number {
+          color: #37CBC6;
+        }
+      }
+
+      &>li:nth-child(3) {
+        .number {
+          color: #F27474;
+        }
+      }
+
+      &>li:nth-child(4) {
+        .number {
+          color: #6AD189;
+        }
+      }
+
+      &>li:nth-child(5) {
+        .number {
+          color: #BC5EF2;
+        }
+      }
+
+      &>li:nth-child(n+4) {
+        margin-top: 16px;
+      }
+
+      &>li:nth-child(4) {
+        margin-right: 16px;
+
+      }
+
+      .number-wrap {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -10px;
+        text-align: center;
+
+        .number {
+          color: #F4C243;
+          font-family: 'DIN';
+          font-weight: 700;
+          font-size: 22px;
+          text-shadow: 0px 3px 0px #000;
+        }
+
+        .unit {
+          font-size: 14px;
+        }
+      }
+
+      .city {
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+        font-weight: 400;
+      }
+
+      img {
+        width: 106px;
+        height: 48px;
+      }
+    }
+  }
+
+  .new-hd {
+    flex: 1;
+    .top;
+    .centers;
+
+    &.basics-left-wrap {
+      width: 94% !important;
+    }
+
+    .new-hd-c-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px 0;
+      justify-content: center;
+
+      :nth-child(n+5) {
+        margin-top: 10px;
+      }
+
+      .new-hd-item {
+        position: relative;
+        width: 94px;
+        height: 80px;
+        cursor: pointer;
+
+        .new-hd-count {
+          position: absolute;
+          top: 40%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 30px;
+
+        }
+
+        .new-hd-name {
+          position: absolute;
+          left: 0;
+          bottom: 3px;
+          right: 0;
+          text-align: center;
+          text-shadow: 0 -2px 2px #000, 2px -2px 2px #000, 2px 0 2px #000, 2px 2px 2px #000, 0 2px 2px #000, -2px 2px 2px #000, -2px 0 2px #000, -2px -2px 2px #000;
+          color: #fff;
+          font-size: 14px;
+
+        }
+      }
+    }
+
+
+  }
+
+  .new-list-wrap {
+    display: flex;
+    margin-top: 20px;
+
+    &>li {
+      width: 118px;
+      height: 86px;
+      background: url('./images/菱形.png') center no-repeat;
+      position: relative;
+      cursor: pointer;
+
+
+      .hp-value {
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        transform: translateX(-50%);
+        background-image: -webkit-linear-gradient(90deg, #F7D347 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      .hp-name {
+        position: absolute;
+        top: 30%;
+        left: 52%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Microsoft YaHei, Microsoft YaHei-Regular;
+
+      }
+    }
+
+    &>li:nth-child(1) {
+
+
+
+
+      .hp-name {
+        width: 80px;
+        text-align: center;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  .hp-wrap {
+    flex: 1;
+    .top;
+    .centers;
+
+    .list {
+      display: flex;
+
+      justify-content: center;
+
+      .top;
+
+      &>li {
+        flex-basis: 96px;
+        height: 94px;
+        background: url(./images/数据装饰.png) 100% 100% no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 96px;
+        margin-right: 20px;
+        justify-content: center;
+
+        .number {
+          font-size: 21px;
+          font-weight: bold;
+
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .number-0 {
+          background-image: -webkit-linear-gradient(90deg, #fcf050 0%, #ffffff 100%);
+        }
+
+        .number-1 {
+          background-image: -webkit-linear-gradient(90deg, #e86e69 0%, #ffffff 100%);
+        }
+
+        .number-2 {
+          background-image: -webkit-linear-gradient(90deg, #a46af5 0%, #ffffff 100%);
+        }
+
+        .text {
+
+
+          font-size: 14px;
+          margin-top: 8px;
+        }
+
+        .text-0 {
+          width: 56px;
+        }
+      }
+    }
+  }
+
+  .sl-wrap {
+    flex: 1;
+
+    .top;
+
+
+
+    .sl-wrap-list {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px;
+
+      &>li {
+        width: 120px;
+        height: 64px;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        .number-wrap {
+          display: flex;
+          justify-content: end;
+          align-items: baseline;
+
+          .number {
+            font-weight: 700;
+            font-size: 22px;
+
+
+          }
+
+          .unit {
+            font-size: 12px;
+          }
+        }
+
+      }
+
+      &>li:first-child {
+        background-image: linear-gradient(to right, #4D8BEA, #6CBFE7);
+        margin-right: 20px;
+      }
+
+      &>li:nth-child(2) {
+        background-image: linear-gradient(to right, #E3AC23, #E9BE63);
+        margin-right: 20px;
+      }
+
+      &>li:nth-child(3) {
+        background-image: linear-gradient(to right, #54B571, #6CE69E);
+      }
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .top;
+
+      &>li {
+        background: url(./images/切分装饰.png) center no-repeat;
+        width: 96px;
+        height: 70px;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .number {
+          font-size: 21px;
+          font-weight: bold;
+          background-image: -webkit-linear-gradient(90deg, #0abfb9 0%, #ffffff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-top: -6px;
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+}
+
+.BasicsLeft-modal {
+  .ant-modal-body {
+    min-height: 360px;
+    // padding: 15px !important;
+  }
+
+  .ant-spin-container {
+    background-color: #081E33 !important;
+  }
+
+  .ant-table-row {
+    background-color: #081E33;
+    color: #fff;
+
+  }
+
+  .ant-table-tbody>tr>td {
+    border-bottom: 1px solid #158BB7 !important;
+    border-right: 1px solid #158BB7 !important;
+  }
+
+  .ant-table-small .ant-table-thead>tr>th {
+    background-color: #081E33 !important;
+    color: #fff;
+    border-bottom: 1px solid #158BB7;
+    border-right: 1px solid #158BB7 !important;
+  }
+
+  .cunstomtable .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: transparent;
+  }
+
+  .ant-pagination-total-text {
+    color: #fff !important;
+  }
+}

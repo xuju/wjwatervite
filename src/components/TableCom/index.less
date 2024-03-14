@@ -1,0 +1,123 @@
+.tablecom {
+  width: calc(100% - 18px);
+  color: #fff;
+
+  .dw {
+    color: #fff;
+    text-align: left;
+    padding-right: 2rem;
+    background: rgba(4, 26, 55, 0.70);
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .ant-table {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .ant-table-thead {
+    background-image: url(./images/title_bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  .ant-table-body {
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      -webkit-box-shadow: unset;
+      background: #22557E;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: none;
+      border-radius: 0;
+      background: rgba(0, 4, 40, 0.06);
+    }
+
+    tr {
+      cursor: pointer;
+    }
+  }
+
+
+
+  .ant-table-thead {
+    .ant-table-cell {
+      background: transparent;
+      color: #46D6DE;
+      border-bottom: none;
+    }
+  }
+
+  .ant-table-tbody {
+    tr.ant-table-placeholder:hover>td {
+      background: transparent;
+    }
+
+    tr {
+      td {
+        border-bottom: transparent;
+        padding: 10px;
+      }
+    }
+  }
+
+  .ant-tabs-content-holder {
+    background: transparent;
+  }
+
+  .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: rgb(70 214 222);
+  }
+
+  .ant-table-tbody>tr.ant-table-row:hover>td {
+    background: #0a314675;
+  }
+
+  .ant-table-row-indent+.ant-table-row-expand-icon {
+    background: transparent;
+    border: 1px solid #46d6de;
+  }
+
+  .bg-row {
+    background: #0a31463b;
+  }
+
+
+}
+
+.ant-table-cell-scrollbar {
+  box-shadow: none !important;
+}
+
+.ant-pagination {
+  justify-content: center;
+}
+
+.ant-pagination-item-active {
+  background-color: #0073F4;
+
+  a {
+    color: #fff;
+  }
+}
+
+.ant-pagination-item>a {
+  color: #fff;
+}
+
+.ant-pagination-item-link {
+  color: #fff !important;
+}
+
+.ant-pagination-item-ellipsis {
+  color: #fff !important;
+}

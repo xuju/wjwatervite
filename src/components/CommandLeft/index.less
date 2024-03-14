@@ -1,0 +1,142 @@
+.command-left {
+  position: absolute;
+  height: 100%;
+  z-index: 500;
+  width: 423px;
+  padding: 10px 10px 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-top: 85px;
+  background-image: linear-gradient(to right, rgba(9, 28, 55, 1), rgba(9, 28, 54, 0.7) 50%, rgba(9, 28, 53, 0.35) 90%, rgba(9, 28, 53, 0.0));
+  left: 0;
+  top: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+
+  .command-left-wrap {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .search-wrap {
+      margin-top: 29px;
+
+      .ant-btn {
+        background-color: #5E9DF8;
+        border-color: #5E9DF8;
+        color: #fff;
+      }
+
+      .ant-input {
+        background: rgba(7, 39, 73, 0.5);
+        color: #fff;
+        border: 1px solid #4ea4d1;
+      }
+    }
+  }
+
+  .command-left-list-wrap {
+    margin-top: 25px;
+    flex: 1;
+    border-bottom: 1px solid #116EB5;
+
+    .header {
+      background: url(./images/title_bg.png);
+      background-repeat: no-repeat;
+      height: 40px;
+      line-height: 40px;
+      background-size: 100% 100%;
+      display: flex;
+      margin-bottom: 8px;
+
+      .index {
+        flex-basis: 50px;
+        text-align: center;
+      }
+
+      .name {
+        flex: 1;
+        margin-left: 30px;
+      }
+    }
+
+    .list-wrap {
+      padding-bottom: 20px;
+      padding-top: 20px;
+
+
+      .list-item:nth-child(odd) {
+        background-color: rgba(7, 39, 73, .5);
+      }
+
+      .list-item {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        cursor: pointer;
+
+        .index {
+          flex-basis: 50px;
+          text-align: center;
+        }
+
+        .name {
+          flex: 1;
+          margin-left: 30px;
+        }
+
+        .icon {
+          flex-basis: 50px;
+          margin-right: 5px;
+        }
+      }
+
+      .select {
+        color: red;
+      }
+
+
+    }
+  }
+
+  .command-pagination {
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    .ant-pagination-item {
+      a {
+        color: #fff;
+      }
+    }
+
+    .anticon-left {
+      color: #fff;
+    }
+
+    .ant-pagination-item-link {
+      color: #fff;
+    }
+
+    .ant-pagination-item-active {
+      a {
+        color: #1890ff;
+      }
+    }
+
+    .ant-pagination-item-active {
+      background-color: transparent;
+      border-color: transparent;
+
+      a {
+        color: #1890ff;
+      }
+    }
+  }
+
+}

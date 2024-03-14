@@ -1,0 +1,155 @@
+.basics-right {
+  position: absolute;
+  z-index: 500;
+  width: 423px;
+  height: 100%;
+  background-image: linear-gradient(to left, #091c37, rgba(9, 28, 54, 0.7) 50%, rgba(9, 28, 53, 0.35) 90%, rgba(9, 28, 53, 0));
+  padding: 10px;
+  padding-top: 85px;
+  color: #fff;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+
+  .b-right-wrap {
+    width: 90%;
+    margin: auto;
+  }
+
+  .centers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .img-wrap {
+    flex: 1;
+    text-align: center;
+    position: relative;
+
+
+
+    .ant-image {
+      height: 220px;
+    }
+
+
+    .zoom-img {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 24px;
+      height: 24px;
+
+
+    }
+  }
+
+  .test-info {
+    flex: 1;
+    padding-top: 5%;
+    .centers;
+
+    .basics-title {
+      margin-bottom: 10px;
+    }
+
+    .test-info-echart {
+      flex: 1;
+
+    }
+
+
+
+
+
+  }
+
+  .water-wrap {
+    flex: 1;
+    .centers;
+
+    .list {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      margin-top: 1.25rem;
+
+      &>li {
+        display: flex;
+        flex-direction: column;
+        width: 96px;
+        height: 76px;
+        background: url(./images/绿色.png) center no-repeat;
+        background-size: 100% 100%;
+        align-items: center;
+        cursor: pointer;
+
+        .name {
+          font-weight: 400;
+          line-height: 1;
+          margin-top: 5px;
+        }
+
+        .number {
+          font-size: 32px;
+          font-weight: bold;
+          margin-top: 10px;
+          font-family: 'Agency';
+          text-shadow: 0 0 15px #fff;
+          letter-spacing: 5px;
+        }
+      }
+
+      &>li:nth-child(2) {
+        background: url(./images/蓝色.png) center no-repeat;
+        background-size: 100% 100%;
+      }
+
+      &>li:nth-child(3) {
+        background: url(./images/黄色.png) center no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .water1-wrap {
+    flex: 1;
+    .centers;
+
+
+    .list {
+      margin-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      &>li {
+        cursor: pointer;
+
+        img {
+          width: 4.8125rem;
+          height: 4.25rem;
+        }
+
+        .bottom {
+          margin-top: .3125rem;
+
+          .name {
+            font-weight: 400;
+
+            font-size: .875rem;
+          }
+
+          .number {
+            font-size: 1.375rem;
+            font-weight: bold;
+            margin-top: .625rem;
+          }
+        }
+      }
+    }
+  }
+}

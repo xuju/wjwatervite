@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors":true,// ts中类型为 "string" 的表达式不能用于索引类型 "{}"。
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "paths": {
+        "@/*": ["./src/*"],
+        "@/assets/*": ["./src/assets/*"],
+        "@/common/*": ["./src/common/*"],
+        "@/components/*": ["./src/components/*"],
+        "@/lib/*": ["./src/lib/*"],
+        "@/config/*": ["./src/config/*"],
+        "@/utils/*": ["./src/utils/*"],
+        "@/pages/*": ["./src/pages/*"],
+        "@/routes/*": ["./src/routes/*"],
+        "@/store/*": ["./src/store/*"]
+    },
+
+  },
+  "include": ["./src",  ],
+  "exclude": ["node_modules"]
+}

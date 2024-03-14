@@ -1,0 +1,109 @@
+#login {
+  background: url(./images/loginBg.png) no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    margin-top: 15vh;
+  }
+
+  .panel {
+    width: 442px;
+    height: 36.5vh;
+    margin-top: 8vh;
+    background: url(./images/panelBg.png) no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+
+    input {
+      width: 355px;
+      border: none;
+      height: 4.6vh;
+      border-radius: 4px;
+      margin-right: 5px;
+      background: transparent;
+      padding: 0 10px 0 46px;
+      box-sizing: border-box;
+      outline: none;
+      color: #000;
+      font-size: 16px;
+    }
+
+    .username {
+      margin-top: 9vh;
+    }
+
+    .password {
+      margin-top: 2.68vh;
+    }
+
+    .oprateGroup {
+      margin-top: 4.2vh;
+      display: flex;
+      justify-content: space-between;
+      width: 360px;
+      margin-right: 5px;
+
+      .login-btn,
+      .rest-btn {
+        cursor: pointer;
+        height: 5.5vh;
+        width: 172px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        font-size: 2.1vh;
+        font-family: Microsoft YaHei;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding-bottom: 2px;
+        box-sizing: border-box;
+      }
+
+      .login-btn {
+        background-image: url(./images/btn-login.png)
+      }
+
+      .rest-btn {
+        background-image: url(./images/btn-reset.png)
+      }
+    }
+  }
+
+  .waterbg {
+    position: absolute;
+    bottom: 0;
+    height: 52vh;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+
+    .water {
+      background: url(./images/water-mask.png) no-repeat;
+      width: 100%;
+      background-size: 100% 100%;
+      height: 102%;
+      -webkit-filter: url("#turbulence");
+      filter: url("#turbulence");
+    }
+  }
+
+  .bridge {
+    position: absolute;
+    top: 81.6vh;
+    z-index: 2;
+    width: 4.0625%;
+    left: 16px;
+    right: 0;
+    margin: 0 auto;
+  }
+}

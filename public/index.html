@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等值线 等值面 GP 调用 demo</title>
+    <link rel="stylesheet" href="http://172.16.9.123:7007/arcgis_js_api/library/3.29/esri/css/esri.css">
+    <script src="http://172.16.9.123:7007/arcgis_js_api/library/3.29/init.js"></script>
+</head>
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+    }
+    #mapDiv{
+        width: 100%;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <div id='mapDiv'></div>
+</body>
+<script>
+    let dzdtUrl = "http://172.16.9.114:6080/arcgis/rest/services/BaseMap/BlueMap2019_2000/MapServer";
+    require(["esri/map",
+	"esri/layers/ArcGISTiledMapServiceLayer",
+	"esri/layers/ArcGISDynamicMapServiceLayer",
+	"esri/geometry/Point",
+	"esri/SpatialReference",
+ 
+	"esri/symbols/SimpleMarkerSymbol",
+	"esri/symbols/TextSymbol",
+	"esri/layers/LabelClass",
+	"esri/renderers/SimpleRenderer",
+	"esri/layers/FeatureLayer",
+	"esri/Color",
+	"esri/symbols/SimpleLineSymbol",
+	"esri/layers/GraphicsLayer",
+	"esri/graphic",
+	"esri/tasks/FeatureSet",
+	"esri/geometry/geometryEngine",
+	"esri/tasks/Geoprocessor",
+	"dojo/domReady!"], 
+    function(Map, ArcGISTiledMapServiceLayer,ArcGISDynamicMapServiceLayer, Point, SpatialReference,
+    SimpleMarkerSymbol,TextSymbol, LabelClass,SimpleRenderer,FeatureLayer,Color,SimpleLineSymbol,GraphicsLayer,Graphic,FeatureSet,geometryEngine,Geoprocessor){
+        let map = new Map("mapDiv");
+        let tiledLayerDZDT = new ArcGISTiledMapServiceLayer(dzdtUrl, { id: '电子地图' });
+        map.addLayer(tiledLayerDZDT);
+        let gp = new Geoprocessor("http://172.16.9.115:6080/arcgis/rest/services/WJWATER/Model_dengzhixian/GPServer/Model_dengzhixian");
+
+        let graphicLayer = new GraphicsLayer({id:"dengzhixian"});
+        let markerSymbol = new SimpleMarkerSymbol({//模拟测站点数据的渲染
+            "color": [255,255,255,64],
+            "size": 12,
+            "angle": -30,
+            "xoffset": 0,
+            "yoffset": 0,
+            "type": "esriSMS",
+            "style": "esriSMSCircle",
+            "outline": {
+                "color": [0,0,0,255],
+                "width": 1,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+            }
+        });
+        let baseSpatialRef = new SpatialReference(4490);
+	
+        //模拟测站点数据
+        let graphic1 = new Graphic(new Point(120.65150200000005,30.925711000000035,baseSpatialRef),markerSymbol,{"OBJECTID": 1,"stcd": "1","stnm": "盛泽","drp": 330,"x": 120.651502,"y": 30.925711});
+        let graphic2 = new Graphic(new Point(120.50056400000005,30.828365000000076,baseSpatialRef),markerSymbol,{"OBJECTID": 2,"stcd": "2","stnm": "桃源","drp": 210,"x": 120.500564,"y": 30.828365});
+        let graphic3 = new Graphic(new Point(120.64674500000001,31.163235000000043,baseSpatialRef),markerSymbol,{"OBJECTID": 3,"stcd": "20","stnm": "松陵内河（西门二站）","drp": 320,"x": 120.646745,"y": 31.163235});
+        let graphic4 = new Graphic(new Point(120.66083700000001,31.155732000000057,baseSpatialRef),markerSymbol,{"OBJECTID": 4,"stcd": "21","stnm": "松陵外河（运河）","drp": 590,"x": 120.660837,"y": 31.155732});
+        let graphic5 = new Graphic(new Point(120.59381200000007,31.134543000000065,baseSpatialRef),markerSymbol,{"OBJECTID": 5,"stcd": "22","stnm": "东太湖","drp": 70,"x": 120.593812,"y": 31.134543});
+        let graphic6 = new Graphic(new Point(120.55207700000005,31.025490000000048,baseSpatialRef),markerSymbol,{"OBJECTID": 6,"stcd": "23","stnm": "开发区","drp": 510,"x": 120.552077,"y": 31.02549});
+        let graphic7 = new Graphic(new Point(120.55207700000005,31.025490000000048,baseSpatialRef),markerSymbol,{"OBJECTID": 7,"stcd": "23","stnm": "横扇","drp": 300,"x": 120.552077,"y": 31.02549});
+        let graphic8 = new Graphic(new Point(120.67094400000008,31.106012000000078,baseSpatialRef),markerSymbol,{"OBJECTID": 8,"stcd": "3519","stnm": "南大港闸站","drp": 540,"x": 120.670944,"y": 31.106012});
+        
+        //用于比对效果
+        graphicLayer.add(graphic1);
+        graphicLayer.add(graphic2);
+        graphicLayer.add(graphic3);
+        graphicLayer.add(graphic4);
+        graphicLayer.add(graphic5);
+        graphicLayer.add(graphic6);
+        graphicLayer.add(graphic7);
+        graphicLayer.add(graphic8);
+        
+        map.addLayer(graphicLayer);
+        //用于生成等值线的参数
+        let features = [];
+        features.push(graphic1);
+        features.push(graphic2);
+        features.push(graphic3);
+        features.push(graphic4);
+        features.push(graphic5);
+        features.push(graphic6);
+        features.push(graphic7);
+        features.push(graphic8);
+    
+        let featureset = new FeatureSet();
+        featureset.features = features;
+        let para = {
+            YL_point:featureset,
+        }
+
+        gp.submitJob(para,function(result){
+            let slsymbol = new SimpleLineSymbol(//标识等值线的渲染
+                    SimpleLineSymbol.STYLE_DASH,
+                    new Color([255,0,0]),3
+            );
+            let jobId = result.jobId;
+            let status = result.jobStatus;
+            console.log(result,'result');
+            if(status == esri.tasks.JobInfo.STATUS_SUCCEEDED) {
+                gp.getResultData(jobId, "Contour_Idw_YL_1", function(jobInfo){
+                    console.log(jobInfo);
+                    let features = jobInfo.value.features;
+                    dojo.forEach(features,function(graphic){
+                        graphic.setSymbol(slsymbol);
+                        graphicLayer.add(graphic);
+                    });
+                    map.addLayer(graphicLayer);
+                });
+            }
+        });
+    });
+</script>
+</html>

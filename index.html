@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <title>吴江智慧水务一张图</title>
+  </head>
+  <script>
+    window.isTest = true;
+    window.isBD = false;
+
+    let cip = window.isTest ? '222.92.89.98' : '221.224.5.104';
+    window.returnCitySN = { cip, cid: '320500', cname: '江苏省苏州市' };
+    window.comKey = returnCitySN['cip'] + '|66a9ae13-9856-4d17-9c8c-4444a9260c62d';
+  </script>
+  <script src="/js/config.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jsencrypt.min.js"></script>
+  <script src="/js/web-control_1.2.5.min.js"></script>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

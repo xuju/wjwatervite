@@ -1,0 +1,130 @@
+.bg_animate() {
+  @keyframes ciecle {
+    0% {
+      background-color: rgba(109, 251, 251, 0);
+    }
+
+    50% {
+      background-color: rgba(109, 251, 251, 1);
+    }
+
+    10% {
+      background-color: rgba(109, 251, 251, 0);
+    }
+  }
+}
+
+.footer-wrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 500;
+  width: 100%;
+  height: 23px;
+  background: url(./images/footer.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  .f-line {
+    position: absolute;
+    width: 5px;
+    height: 2px;
+    background-color: rgba(0, 203, 255, 0.5);
+
+
+    height: 2px;
+
+  }
+
+  .f-left-line {
+    left: 230px;
+    top: 7px;
+    animation: leftMoveLine 1s infinite linear;
+  }
+
+  .f-right-line {
+    top: 8px;
+    right: 290px;
+    animation: leftMoveLine1 1s infinite linear;
+  }
+
+  .f-circle {
+    position: absolute;
+
+    display: flex;
+
+    &>span {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1px solid rgb(109, 251, 251);
+      margin-right: 10px;
+      border-radius: 50%;
+      .bg_animate();
+
+    }
+  }
+
+  .circle-left {
+    left: 140px;
+    top: 13px;
+  }
+
+  .circle-right {
+    right: 135px;
+    top: 13px;
+  }
+
+  .f-img-linear {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    width: 475px;
+    height: 8px;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to right, transparent 0%, rgb(255, 255, 255) 10%, rgb(0, 0, 0.5) 100%);
+    animation: opacityImg 1s infinite linear;
+  }
+}
+
+@keyframes leftMoveLine {
+  0% {
+    left: 230px;
+  }
+
+  50% {
+    left: 290px;
+  }
+
+  100% {
+    left: 230px;
+  }
+}
+
+@keyframes leftMoveLine1 {
+  0% {
+    right: 290px;
+  }
+
+  50% {
+    right: 230px;
+  }
+
+  100% {
+    right: 290px;
+  }
+}
+
+@keyframes opacityImg {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: .5;
+  }
+}

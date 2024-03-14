@@ -1,0 +1,136 @@
+.ssylpopu {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .label {
+    margin-left: 1rem;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+  .ant-picker {
+    background: #011931;
+    border: 1px solid #0092979e;
+    color: #fff;
+
+    .ant-picker-separator {
+      color: #ffffffd9;
+    }
+
+    .ant-picker-suffix {
+      color: #ffffffd9;
+    }
+  }
+
+  .ant-picker-input>input {
+    color: #ffffffd9;
+  }
+
+  .ant-radio-button-wrapper {
+    color: #fff;
+    background: #fff0;
+    border: 1px solid #054b5a;
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    background-color: #054b5a;
+  }
+
+  .ant-table {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .ant-table-body {
+
+
+    &::-webkit-scrollbar {
+      height: 20px;
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.2);
+      background: #22557E;
+    }
+
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: none;
+      border-radius: 0;
+      background: rgba(0, 4, 40, 0.06);
+    }
+
+  }
+
+  .ant-table-thead {
+    .ant-table-cell {
+      background: transparent;
+      color: #46D6DE;
+      border-bottom: 1px solid #0092979e;
+    }
+  }
+
+  .ant-table-tbody {
+    tr.ant-table-placeholder:hover>td {
+      background: transparent;
+    }
+
+    tr {
+      td {
+        border-bottom: 1px solid #0092979e;
+        padding: 10px;
+      }
+    }
+  }
+
+  .ant-tabs-content-holder {
+    background: transparent;
+  }
+
+  .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    background-color: rgb(70 214 222);
+  }
+
+  .ant-table-tbody>tr.ant-table-row:hover>td {
+    background: #0a314675;
+  }
+
+  .ant-table-row-indent+.ant-table-row-expand-icon {
+    background: transparent;
+    border: 1px solid #46d6de;
+  }
+
+  .select-btn-day {
+    display: flex;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid rgb(20, 114, 190);
+    border-radius: 5px;
+    height: 30px;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .select-day {
+      background-color: rgb(20, 114, 190);
+      color: #fff;
+    }
+
+    .btn-item {
+      height: 30px;
+      border-right: 1px solid rgb(20, 114, 190);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

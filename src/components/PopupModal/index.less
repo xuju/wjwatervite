@@ -1,0 +1,54 @@
+@borderColor: #4ea4d1;
+
+.PopupModal {
+  color: #fff;
+  padding: 10px;
+
+  .ant-descriptions-item-label {
+    background-color: #062444;
+    color: #0B86D4;
+
+  }
+
+  .ant-descriptions-bordered .ant-descriptions-row {
+    border-color: @borderColor !important;
+  }
+
+  .ant-descriptions-view {
+    border-color: @borderColor !important;
+  }
+
+  .ant-descriptions-bordered .ant-descriptions-item-label,
+  .ant-descriptions-bordered .ant-descriptions-item-content {
+    border-right: 1px solid @borderColor;
+
+  }
+
+  .ant-descriptions-item-content {
+    color: #fff;
+    min-width: 300px;
+  }
+
+  .PopupModal-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+    .right-pagation {
+      flex: 1;
+      overflow: hidden;
+      text-align: right;
+    }
+  }
+}
+
+.video-wraps {
+  height: 500px;
+  overflow: hidden;
+
+  >video {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}

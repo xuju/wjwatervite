@@ -1,0 +1,154 @@
+.popup-qxwz {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  .title {
+    color: #5EC5FF;
+    font-weight: bold;
+    position: relative;
+    text-indent: 10px;
+    margin-bottom: 10px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 2px;
+      background-color: #5EC5FF;
+      height: 100%;
+    }
+  }
+
+  .list-title {
+    margin-top: 30px;
+  }
+
+  .list-wrap {
+
+    max-height: 320px;
+
+
+    .list-header {
+      display: flex;
+      border: 1px solid #4EA4D1;
+
+      .list-header-title {
+        border-right: 1px solid #4EA4D1;
+        flex: 1;
+        color: #5EC5FF;
+        text-align: center;
+        background-color: rgb(7, 33, 65);
+        line-height: 50px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
+    .list-table-wrap {
+      display: flex;
+      border: 1px solid #4EA4D1;
+      border-top: none;
+
+      .list-table-item {
+        border-right: 1px solid #4EA4D1;
+        flex: 1;
+        color: #fff;
+        text-align: center;
+
+        line-height: 50px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
+  }
+
+  .popup-qxwz-desc {
+    .ant-descriptions-item-label {
+      background-color: rgb(7, 33, 65);
+      color: #5EC5FF;
+      text-align: right;
+
+    }
+
+    .ant-descriptions-item-content {
+      color: #fff;
+    }
+  }
+
+  .ant-descriptions-bordered .ant-descriptions-row {
+    border-color: #4EA4D1;
+  }
+
+  .ant-descriptions-bordered .ant-descriptions-view {
+    border-color: #4EA4D1;
+  }
+
+  .ant-descriptions-bordered .ant-descriptions-item-label,
+  .ant-descriptions-bordered .ant-descriptions-item-content {
+    border-color: #4EA4D1;
+  }
+
+
+}
+
+.playWnd {
+  height: 100%;
+  width: 100%;
+  // background-color: turquoise;
+}
+
+.QXWZVideo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #fff;
+  padding: 10px;
+
+  .q-left {
+    flex-basis: 80%;
+    margin-right: 10px;
+  }
+
+  .q-right {
+    flex: 1;
+    background-color: #002851;
+    border: 1px solid #797979;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    .q-title {
+      line-height: 40px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      border: 1px solid #797979;
+    }
+
+    .q-list-wrap {
+      padding: 10px;
+
+      .ant-radio-group {
+        display: flex;
+        flex-direction: column;
+
+        .ant-radio-wrapper {
+          flex: 1;
+          line-height: 30px;
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

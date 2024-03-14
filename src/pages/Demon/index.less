@@ -1,0 +1,99 @@
+.conomy-wrap {
+  width: 100%;
+  height: 100%;
+
+  .comomy-type-wrap {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 100;
+
+    &>li {
+      width: 144px;
+      height: 35px;
+      background: url(./images/btnbj.png);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      color: #fff;
+      text-align: center;
+      line-height: 35px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-right: 15px;
+
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.select {
+        background: url(./images/btnbj_on.png);
+      }
+    }
+  }
+
+  .esri-legend {
+    width: 132px !important;
+    height: 158px;
+    background: url(./images/legend1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    left: 450px;
+    bottom: 50px;
+    z-index: 1000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .esri-legend__service-label {
+      color: #fff;
+      margin-top: 10px;
+      margin-left: 5px;
+    }
+
+    .esri-legend__layer-cell {
+      min-width: auto;
+    }
+  }
+
+  .layer-control {
+    position: fixed;
+    right: 516px;
+    top: 103px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+
+    .point-switch {
+      margin-top: 20px;
+    }
+  }
+}
+
+.demon-modal {
+  position: relative;
+
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: unset;
+  }
+
+  .demon-modal-fullScreen {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+  }
+}
+
+#demon-coustom-popup-wrap {
+  position: fixed;
+  width: 318px;
+  height: 220px;
+}

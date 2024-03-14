@@ -1,0 +1,35 @@
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+
+  .popup-header-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 450px;
+  }
+
+  .popup-header-list {
+    margin-right: 50px;
+    display: flex;
+
+    .popup-header-item {
+      margin-right: 20px;
+      font-size: 14px;
+      font-weight: 0;
+      cursor: pointer;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      &.select {
+        background-color: #0B86D4;
+
+        color: #fff;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.anchorponint {
+  // background: #00f0ff; #ff9900
+  background: transparent;
+  width: 8px;
+  height: 8px;
+  border: 2px transparent solid;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+
+  p,
+  span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    animation: point_animation 1.5s infinite;
+    box-shadow: 0px 0px 2px #1774dc;
+    margin: 0px;
+    border-radius: 50%;
+  }
+
+  span {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes point_animation {
+    10% {
+      transform: scale(2);
+    }
+
+    100% {
+      transform: scale(14);
+    }
+  }
+}
